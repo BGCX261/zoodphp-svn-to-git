@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Login</title>
+</head>
+<body>
+<h1>！！！Login！！！</h1>
+<div>
+	<form action="/login/index.login/?u={$u|urlencode}" method="post">
+	   <!--input type="hidden" name="u" value="{$u}" /-->
+	   <label>{$error}</label>
+       <label>Username: <input type="text" name="username" value="{$username}" /></label>
+       <label>Password: <input type="password" name="password" value="" /></label>
+       <label><input type="checkbox" name="persistent" {if $persistent}checked="checked"{/if} /> Persistent Cookie</label>
+       <label><input type="submit" value="Login" /></label>
+	</form>
+</div>
+</body>
+</html>
